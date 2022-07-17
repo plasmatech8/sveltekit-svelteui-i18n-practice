@@ -1,0 +1,17 @@
+{
+	// Formatting
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+
+	// Editor
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+
+	// Whitespace handling
+	"files.trimTrailingWhitespace": true,
+	"files.trimFinalNewlines": true,
+
+	// For auto-rename html tags
+	"editor.linkedEditing": true
+}

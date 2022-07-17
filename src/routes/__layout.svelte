@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../app.css';
 	import { AppShell, Navbar, Header, Aside, Footer, ShellSection, Burger } from '@svelteuidev/core';
 	let opened = false;
 </script>

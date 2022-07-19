@@ -1,4 +1,4 @@
-# sveltekit-svelteui-i18n-practice
+# sveltekit-svelteui-practice
 
 - [sveltekit-svelteui-i18n-practice](#sveltekit-svelteui-i18n-practice)
   - [01. Initialise Sveltekit App](#01-initialise-sveltekit-app)

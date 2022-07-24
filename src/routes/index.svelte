@@ -20,6 +20,6 @@
 
 <!-- Modals -->
 <div class="my-5">Modals:</div>
-<Modal {opened} onClose={() => (opened = false)} title="Introduce yourself!">Hello World!!!</Modal>
+<Modal {opened} on:close={() => (opened = false)} title="Introduce yourself!">Hello World!!!</Modal>
 <Button on:click={() => (opened = true)}>Open Modal</Button>
 {opened}

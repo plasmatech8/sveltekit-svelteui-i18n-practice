@@ -9,24 +9,34 @@
 		ShellSection,
 		Burger,
 		Button,
-		SvelteUIProvider
+		SvelteUIProvider,
+		Switch,
+		Group,
+		Space,
+		Title
 	} from '@svelteuidev/core';
 	let opened = false;
 
 	const links = [
 		{ href: '/', name: 'Home' },
-		{ href: '/foo', name: 'Foo' },
-		{ href: '/bar', name: 'Bar' }
+		{ href: '/buttons', name: 'Buttons' },
+		{ href: '/modals', name: 'Modals' },
+		{ href: '/typography', name: 'Typography' }
 	];
+
+	import { isDarkTheme } from '$lib/stores';
 </script>
 
-<SvelteUIProvider ssr>
+<SvelteUIProvider withNormalizeCSS withGlobalStyles themeObserver={$isDarkTheme ? 'dark' : 'light'}>
 	<AppShell>
-		<Header slot="header" height={60} override={{ p: '$mdPX' }}>
-			<Burger {opened} on:click={() => (opened = !opened)} />
-			Head
+		<Header slot="header" override={{ p: '$smPX' }}>
+			<div class="flex justify-between content-center">
+				<Burger {opened} on:click={() => (opened = !opened)} />
+				<Title mt="xs" size="lg">My Test Application</Title>
+				<Switch size="lg" offLabel="☀️" onLabel="🌙" bind:checked={$isDarkTheme} />
+			</div>
 		</Header>
-		<Navbar slot="navbar" hidden={!opened} width={{ base: 300 }}>
+		<Navbar slot="navbar" class="p-2" hidden={!opened} width={{ base: 300 }}>
 			{#each links as link}
 				<Button class="point" variant="subtle" href={link.href}>{link.name}</Button>
 			{/each}

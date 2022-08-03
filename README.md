@@ -1,9 +1,11 @@
 # sveltekit-svelteui-practice
 
-- [sveltekit-svelteui-i18n-practice](#sveltekit-svelteui-i18n-practice)
-  - [01. Initialise Sveltekit App](#01-initialise-sveltekit-app)
-  - [02. Install SvelteUI](#02-install-svelteui)
-  - [03. Install TailwindCSS](#03-install-tailwindcss)
+Preview site: https://sveltekit-svelteui-practice.pages.dev/
+
+- [sveltekit-svelteui-practice](#sveltekit-svelteui-practice)
+	- [01. Initialise Sveltekit App](#01-initialise-sveltekit-app)
+	- [02. Install SvelteUI](#02-install-svelteui)
+	- [03. Install TailwindCSS](#03-install-tailwindcss)
 
 ## 01. Initialise Sveltekit App
 

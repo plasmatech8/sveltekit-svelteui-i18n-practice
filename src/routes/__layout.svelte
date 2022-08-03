@@ -4,17 +4,14 @@
 		AppShell,
 		Navbar,
 		Header,
-		Aside,
-		Footer,
-		ShellSection,
 		Burger,
 		Button,
 		SvelteUIProvider,
 		Switch,
-		Group,
-		Space,
 		Title
 	} from '@svelteuidev/core';
+	import { useViewportSize } from '@svelteuidev/composables';
+
 	let opened = false;
 
 	const links = [
@@ -25,6 +22,8 @@
 	];
 
 	import { isDarkTheme } from '$lib/stores';
+
+	const viewport = useViewportSize(); // TODO: breakpoint instead of viewport size
 </script>
 
 <SvelteUIProvider
@@ -36,8 +35,14 @@
 	<AppShell>
 		<Header slot="header" override={{ p: '$smPX' }}>
 			<div class="flex justify-between content-center">
-				<Burger {opened} on:click={() => (opened = !opened)} />
-				<Title mt="xs" size="lg">My Test Application</Title>
+				{#if $viewport.width < 993}
+					<Burger {opened} on:click={() => (opened = !opened)} />
+				{/if}
+				<div class="flex-grow text-center">
+					<div class="inline-block">
+						<Title mt="xs" size="lg">My Test Application</Title>
+					</div>
+				</div>
 				<Switch size="lg" offLabel="☀️" onLabel="🌙" bind:checked={$isDarkTheme} />
 			</div>
 		</Header>

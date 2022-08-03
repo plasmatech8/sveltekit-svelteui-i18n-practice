@@ -22,8 +22,11 @@
 	];
 
 	import { isDarkTheme } from '$lib/stores';
+	import { page } from '$app/stores';
 
 	const viewport = useViewportSize(); // TODO: breakpoint instead of viewport size
+
+	$: currentPath = `/${$page.routeId}`;
 </script>
 
 <SvelteUIProvider
@@ -48,7 +51,11 @@
 		</Header>
 		<Navbar slot="navbar" class="p-2" hidden={!opened} width={{ base: 300 }}>
 			{#each links as link}
-				<Button class="point" variant="subtle" href={link.href}>{link.name}</Button>
+				<Button
+					class="point"
+					variant={currentPath === link.href ? 'light' : 'subtle'}
+					href={link.href}>{link.name}</Button
+				>
 			{/each}
 		</Navbar>
 		<slot>This is the main content</slot>

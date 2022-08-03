@@ -22,3 +22,13 @@
 	<Title order={2} mb="lg">Typography (h2)</Title>
 	<Text mb="lg">Here is some text. Woo.</Text>
 </TypographyProvider>
+
+<Divider variant="dashed" labelPosition="center">
+	<div slot="label">Junk</div>
+</Divider>
+
+<!-- Junk -->
+<div class="my-5">Text Content:</div>
+<p class="text-6xl mb-5">6xl Text</p>
+<Title>This is a SvelteUI Title</Title>
+<h1>This is a H1 Title</h1>

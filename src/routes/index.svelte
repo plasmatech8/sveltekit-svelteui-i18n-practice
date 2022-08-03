@@ -1,16 +1,15 @@
 <script lang="ts">
-	import { Button, Title, Anchor, Modal } from '@svelteuidev/core';
+	import { Button, Title, Anchor, Modal, Center } from '@svelteuidev/core';
 
 	let opened = false;
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <Anchor href="https://kit.svelte.dev">kit.svelte.dev</Anchor> to read the documentation</p>
+<Title mb="lg">Welcome to this Test Application</Title>
 
-<!-- Text Content -->
-<div class="my-5">Text Content:</div>
-<p class="text-6xl mb-5">6xl Text</p>
-<Title>This is a SvelteUI Title</Title>
-<h1>This is a H1 Title</h1>
+<p>
+	Visit <Anchor href="https://github.com/plasmatech8/sveltekit-svelteui-practice"
+		>the GitHub repository</Anchor
+	> to view the source code.
+</p>
 
-<!-- Modals -->
+<Center class="h-96 text-9xl">👍</Center>

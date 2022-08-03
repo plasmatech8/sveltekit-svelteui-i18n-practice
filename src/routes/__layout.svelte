@@ -27,7 +27,12 @@
 	import { isDarkTheme } from '$lib/stores';
 </script>
 
-<SvelteUIProvider withNormalizeCSS withGlobalStyles themeObserver={$isDarkTheme ? 'dark' : 'light'}>
+<SvelteUIProvider
+	ssr
+	withNormalizeCSS
+	withGlobalStyles
+	themeObserver={$isDarkTheme ? 'dark' : 'light'}
+>
 	<AppShell>
 		<Header slot="header" override={{ p: '$smPX' }}>
 			<div class="flex justify-between content-center">
